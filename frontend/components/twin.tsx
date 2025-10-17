@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User } from 'lucide-react';
+import Image from 'next/image';
 
 interface Message {
     id: string;
@@ -96,8 +97,8 @@ export default function Twin() {
     // Check if avatar exists
     const [hasAvatar, setHasAvatar] = useState(false);
     useEffect(() => {
-        // Check if avatar.jpeg exists
-        fetch('/avatar.jpeg', { method: 'HEAD' })
+        // Check if avatar.png exists
+        fetch('/avatar.png', { method: 'HEAD' })
             .then(res => setHasAvatar(res.ok))
             .catch(() => setHasAvatar(false));
     }, []);
@@ -118,8 +119,10 @@ export default function Twin() {
                 {messages.length === 0 && (
                     <div className="text-center text-gray-500 mt-8">
                         {hasAvatar ? (
-                            <img 
-                                src="/avatar.jpeg" 
+                            <Image 
+                                src="/avatar.png"
+                                width={80}
+                                height={80}
                                 alt="Digital Twin Avatar" 
                                 className="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-gray-300"
                             />
@@ -141,8 +144,10 @@ export default function Twin() {
                         {message.role === 'assistant' && (
                             <div className="flex-shrink-0">
                                 {hasAvatar ? (
-                                    <img 
-                                        src="/avatar.jpeg" 
+                                    <Image 
+                                        src="/avatar.png" 
+                                        width={32}
+                                        height={32}
                                         alt="Digital Twin Avatar" 
                                         className="w-8 h-8 rounded-full border border-slate-300"
                                     />
@@ -185,8 +190,10 @@ export default function Twin() {
                     <div className="flex gap-3 justify-start">
                         <div className="flex-shrink-0">
                             {hasAvatar ? (
-                                <img 
-                                    src="/avatar.jpeg" 
+                                <Image 
+                                    width={32}
+                                    height={32}
+                                    src="/avatar.png" 
                                     alt="Digital Twin Avatar" 
                                     className="w-8 h-8 rounded-full border border-slate-300"
                                 />
