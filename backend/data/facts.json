@@ -1,0 +1,21 @@
+{
+  "full_name": "Christophe Moreira",
+  "name": "Christophe",
+  "current_role": "AI Developer & Telecom Engineer",
+  "location": "Lousada, Porto, Portugal",
+  "email": "moreira.christophe@gmail.com",
+  "linkedin": "www.linkedin.com/in/christophe-moreira-15aa7551",
+  "specialties": [
+    "AI Development (LLMs, RAG)",
+    "Telecom Engineering (5G)",
+    "Cloud & DevOps (Kubernetes, Docker)"
+  ],
+  "years_experience": 16,
+  "education": [
+    {
+      "degree": "Licentiate degree, Information Technology",
+      "institution": "University of Turku",
+      "year": "2009"
+    }
+  ]
+}
